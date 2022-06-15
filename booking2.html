@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AirWays</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link rel="shortcut icon" type="image/x-icon" href="images/logo.jpg"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+   
+  
+    <script src="js/walidation.js"></script>
+    <script src="js/boocking.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+  </head>
+  <body>
+    
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">AirWays</a>
+     
+        
+     
+
+     
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item "><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item active"><a href="booking.html" class="nav-link">Booking</a></li>
+          <li class="nav-item"><a href="countries.html" class="nav-link">Countries</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      
+    </div>
+  </nav>
+  <!-- END nav -->
+  
+  
+      <div class="block-30 block-30-sm item" style="background-image: url('images/bg_1.jpg');" >
+        <div class="container">
+          <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-8">
+              <h2 class="heading mb-5">Take a ticket!</h2>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
+
+  <div class="site-section border-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 text-center">
+          <div class="media block-6">
+            <div class="icon"><span class="ion-ios-bulb"></span></div>
+            <div class="media-body">
+              <h3 class="heading">Rezerwacja biletów</h3>
+              <div class="container">
+                  <select name="items" onchange='selectchange()' id="itemss" >
+                	<option value="" disabled selected hidden>Wybierz formularz:</option>
+                </select>
+   <div class="card">
+      <div class="card-body py-md-4">
+       <form  onsubmit="return sprawdz()">
+       	
+            
+          
+          <div class="form-group">
+             <input class="form-control" name="name" id="name" placeholder="Imię">
+          </div>
+          <div class="form-group">
+             <span id="name_error" style="display: none"></span>
+          </div>
+          <div class="form-group">
+             <input class="form-control" id="surname" placeholder="Nazwisko">
+          </div>
+          <div class="form-group">
+             <span id="surname_error" style="display: none"></span>
+          </div>
+          <div class="form-group">
+             <input class="form-control" id="email" placeholder="E-mail">
+          </div>
+          <div class="form-group">
+             <span id="email_error" style="display: none"></span>
+          </div>
+          <div class="form-group">
+             <input class="form-control" id="phone" placeholder="Telefon">
+          </div>
+          <div class="form-group">
+             <span id="phone_error" style="display: none"></span>
+          </div>
+          <div class="form-group">
+                <select name="panstwo" id="selectt" >
+              <option value="" disabled selected hidden>Wybierz państwo:</option>
+              <option value="Polska">Polska</option>
+              <option value="Ukraina">Ukraina</option>
+              <option value="Francja">Francja</option>
+              <option value="Niemcy">Niemcy</option>
+              <option value="Wielka Brytania">Wielka Brytania</option>
+              <option value="Belgia">Belgia</option>
+              <option value="USA">USA</option>
+              <option value="Kanada">Kanada</option>
+              <option value="Indie">Indie</option>
+            </select>
+          </div>
+          <div class="form-group">
+             <span id="select_error" style="display: none"></span>
+          </div>
+           <div class="form-group">
+             <input type="text" class="form-control" id="town" placeholder="Miasto">
+          </div>
+          <div class="form-group">
+             <span id="town_error" style="display: none"></span>
+          </div>
+          <div class="form-group">
+             <input type="date" class="form-control" id="date" >
+          </div>
+          <div class="form-group">
+             <span id="date_error" style="display: none"></span>
+          </div>
+          
+          <div class="d-flex flex-row align-items-center justify-content-between">
+            <input type="submit" value=" Wyślij " onclick="update()" />
+            <input type="reset" value=" Anuluj " onclick="remove()"/>
+          </div>
+        </form>
+     </div>
+  </div>
+</div>
+            </div>
+          </div>     
+        </div>
+    
+    
+
+      </div>
+    </div>
+  </div> <!-- .site-section -->
+
+   <script >
+    select = document.getElementById('itemss');
+
+for (var i = 0; i<=localStorage.length-1; i++){
+    var opt = document.createElement('option');
+    opt.value = localStorage. key(i);
+    opt.innerHTML = localStorage.key(i);
+    select.appendChild(opt);
+}
+
+   </script>	
+
+  
+
+  <div class="site-section bg-light">
+    <div class="container">
+      <div class="row mb-3 justify-content-center">
+        <div class="col-md-8 text-center">
+          <h2>Copyrighting</h2>
+          <p class="lead">All rights reserved&copy; 2022.</p>
+          <p>Wyrażam zgodę na przetwarzanie moich danych osobowychб a także potwierdzam, że nie będę kopiować danych z tej strony bez powiadomienia AirWays.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    
+
+
+  </body>
+</html>
